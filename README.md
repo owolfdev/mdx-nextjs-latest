@@ -8,9 +8,9 @@ A fast, modern, and accessible blog platform built with:
 - **Tailwind CSS for styling**
 - **File-based content system in `/content/posts`**
 
-[GitHub repo](https://github.com/owolfdev/mdx-next15-react19)
+[GitHub repo](https://github.com/owolfdev/mdx-nextjs-latest)
 
-[Deployed app](https://mdx-next15-react19.vercel.app/)
+[Deployed app](https://mdx-next-latest.vercel.app/)
 
 ---
 
