@@ -1,8 +1,8 @@
-# 📝 Next.js 15 MDX Blog
+# 📝 Next.js 16 MDX Blog
 
 A fast, modern, and accessible blog platform built with:
 
-- **Next.js 15 App Router**
+- **Next.js 16 App Router**
 - **MDX-based content authoring**
 - **React 19 with Server Components (RSC)**
 - **Tailwind CSS for styling**
@@ -19,7 +19,7 @@ A fast, modern, and accessible blog platform built with:
 - 📄 **MDX-powered posts** – write interactive markdown with React components
 - 📦 **App Router support** – modern routing, layouts, and loading patterns
 - 🧱 **Custom `useMDXComponents`** – style your headings, paragraphs, and code blocks consistently
-- 💡 **Async `params` and metadata parsing** – compatible with latest Next.js 15 behavior
+- 💡 **Async `params` and metadata parsing** – compatible with latest Next.js 16 behavior
 - 🌓 **Dark mode friendly** – via `dark:prose-invert` styling
 - 📁 **File-based content** – add `.mdx` files to `content/posts` to create pages
 - ✅ **Error handling** – 404s, missing metadata, and broken posts are gracefully handled
@@ -72,7 +72,7 @@ pnpm dev           # run locally at http://localhost:3000
 
 ## 📦 Tech Stack
 
-- [Next.js 15 (App Router)](https://nextjs.org/docs/app)
+- [Next.js 16 (App Router)](https://nextjs.org/docs/app)
 - [MDX](https://mdxjs.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [React 19](https://react.dev/)

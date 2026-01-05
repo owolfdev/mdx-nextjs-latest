@@ -2,7 +2,7 @@ export const metadata = {
   title: "React 19 and Server Components",
   publishDate: "2025-04-13",
   description:
-    "Integrating React 19's Server Components with MDX in Next.js 15.",
+    "Integrating React 19's Server Components with MDX in Next.js 16.",
 };
 
 ## ⚛️ React 19 and Server Components
@@ -13,7 +13,7 @@ React 19 brings improved support for Server Components (RSC), and it's fully com
 
 ## 🔄 Breaking Change in Next.js 15: Async Props
 
-With the release of Next.js 15, there's a significant shift in how certain request-specific data is accessed. APIs such as `params`, `searchParams`, `cookies`, and `headers` are now asynchronous. This means they return Promises and must be awaited, even within Server Components.
+With the release of Next.js 15, there's a significant shift in how certain request-specific data is accessed. APIs such as `params`, `searchParams`, `cookies`, and `headers` are now asynchronous. This means they return Promises and must be awaited, even within Server Components. This pattern continues in Next.js 16.
 
 ### ❗ Why This Matters
 
@@ -27,22 +27,22 @@ export default function Page({ params }: { params: { slug: string } }) {
 }
 ```
 
-In Next.js 15, attempting to access `params` synchronously will result in errors because `params` is now a Promise:
+In Next.js 15 and 16, attempting to access `params` synchronously will result in errors because `params` is now a Promise:
 
 ```tsx
-// ❌ This will cause an error in Next.js 15
+// ❌ This will cause an error in Next.js 15+
 export default function Page({ params }: { params: { slug: string } }) {
   const slug = params.slug; // Error: Cannot read property 'slug' of undefined
   return <div>Post: {slug}</div>;
 }
 ```
 
-### ✅ Correct Usage in Next.js 15
+### ✅ Correct Usage in Next.js 15+
 
 To adapt to this change, you should await the `params` object:
 
 ```tsx
-// Next.js 15
+// Next.js 15+
 export default async function Page({
   params,
 }: {
@@ -98,7 +98,7 @@ This approach allows you to define consistent styling and behavior for your MDX 
 
 ## 🛠️ Migration Tips
 
-To facilitate the transition to Next.js 15, consider the following:
+To facilitate the transition to Next.js 15+ (including Next.js 16), consider the following:
 
 - **Codemod Tool**: Utilize the official codemod to automate the migration of synchronous APIs to their asynchronous counterparts:
 
@@ -124,4 +124,4 @@ To facilitate the transition to Next.js 15, consider the following:
 
 ---
 
-By understanding and adapting to these changes, you can ensure that your application remains compatible with Next.js 15 and leverages the latest features and improvements.
+By understanding and adapting to these changes, you can ensure that your application remains compatible with Next.js 15+ and Next.js 16, and leverages the latest features and improvements.
